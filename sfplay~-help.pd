@@ -1,0 +1,70 @@
+#N canvas 778 70 406 478 10;
+#X obj 1 450 cnv 15 400 21 empty \$0-pddp.cnv.footer empty 20 12 0
+14 -232576 -33289 0;
+#X obj 1 326 cnv 3 400 3 empty \$0-pddp.cnv.inlets inlets 8 12 0 13
+-228856 -1 0;
+#N canvas 507 26 494 625 META 0;
+#X text 12 95 RELEASE_VERSION 0.41.4;
+#X text 158 96 Keywords:;
+#X text 12 5 GENRE help;
+#X text 12 65 DESCRIPTION using help patches in Pure Data;
+#X text 12 25 KEYWORDS needs_work (mention how pd finds help files
+and replace 'common_terminology' subpatch with link to glossary);
+#X text 117 111 control- control rate objects \; signal- audiorate
+objects \; data_structure- objects for creating and managing data structures
+\; nonlocal- objects that can make nonlocal connections to other objects
+(i.e. \, communicate with other objects without using wires) \; storage-
+objects whose main function is to store a value \; array- objects for
+creating and editing arrays \; GUI- objects that provide a graphical
+user interface \; MIDI- objects that provide MIDI functionality \;
+time- objects that measure time or which the user can use to manipulate
+time \; unfinished- help patches under construction \; orphan- help
+patches that can't get accessed by right clicking on the corresponding
+object (like [drawsymbol]) \; block-oriented- see Matju's definition
+\; analysis- object that does analysis \; conversion- convert from
+one set of units to another \; filter \; network \; trigonometry \;
+soundfile- object that can play \, manipulate \, and/or save a sound
+file (wav \, ogg \, mp3 \, etc.). \; random- object outputs a random
+value \, list \, or signal \; symbol_op- object that manipulates or
+stores a symbol \; list_op- object that manipulates or stores a list
+\; canvas_op- object whose behavior only makes sense in terms of a
+canvas \; patchfile_op- object whose behavior only makes sense in terms
+of a patchfile \; ramp - a ramp \; bandlimited \; pd-op - object that
+can report on or manipulate global Pd operation \; anything_op - store
+or manipulate an anything \; abstraction_op - object that only makes
+sense in terms of abstractions;
+#X restore 341 452 pd META;
+#N canvas 78 483 428 109 Related_objects 0;
+#X obj 0 0 cnv 15 425 20 empty \$0-pddp.cnv.subheading empty 3 12 0
+14 -232576 -1 0;
+#X text 6 1 Related Objects;
+#X obj 13 32 tabplay~;
+#X restore 102 452 pd Related_objects;
+#X obj 79 335 cnv 17 3 42 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X obj 296 51 pddp/dsp;
+#X obj 0 0 cnv 15 400 40 empty \$0-pddp.cnv.header sfplay~ 3 12 1 18
+-232576 -1 0;
+#X obj 79 387 cnv 17 3 57 empty \$0-pddp.cnv.let.1 1 5 9 0 16 -228856
+-162280 0;
+#X obj 6 452 pddp/pddplink all_about.pd -text All About Pd;
+#X text 12 23 simple stereo soundfile player \, as in Max;
+#X text 269 12;
+#X text 270 1;
+#X obj 79 112 sfplay~;
+#X obj 148 89 openpanel;
+#X obj 148 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 72 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 87 86 stop;
+#X text 179 334;
+#X text 99 334 just like the left inlet for;
+#X obj 275 334 tabplay~;
+#X text 100 388 symbol - name of soundfile to play;
+#X text 7 159 left volume;
+#X obj 161 161 right volume;
+#X connect 13 0 12 1;
+#X connect 14 0 13 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;

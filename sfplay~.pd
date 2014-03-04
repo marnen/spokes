@@ -11,14 +11,14 @@
 #X obj 31 64 tabplay~ \$0.left;
 #X obj 141 64 tabplay~ \$0.right;
 #X obj 256 161 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 0 1;
+-262130 -1 1800 1;
 #X obj 305 161 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 0 1;
+-262130 -1 5600 1;
 #X obj 14 246 *~ 0;
 #X obj 132 245 *~ 0;
 #X obj 105 152 dsp;
 #X obj 278 202 tgl 20 0 empty empty DSP 0 -10 1 10 -262144 -3137 -3137
-1 1;
+0 1;
 #X obj 200 318 s \$0.left.volume;
 #X obj 320 319 s \$0.right.volume;
 #X obj 32 197 r \$0.left.volume;

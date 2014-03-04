@@ -1,0 +1,41 @@
+#N canvas 700 161 826 399 10;
+#X obj 251 115 soundfiler;
+#X obj 251 62 pack s \$0;
+#X obj 251 39 inlet;
+#X text 249 17 filename;
+#X obj 30 41 inlet;
+#X text 30 22 trigger;
+#X obj 378 37 table \$0.left;
+#X obj 475 37 table \$0.right;
+#X msg 251 88 read -resize \$1 \$2.left \$2.right;
+#X obj 31 64 tabplay~ \$0.left;
+#X obj 141 64 tabplay~ \$0.right;
+#X obj 256 161 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+-262130 -1 1800 1;
+#X obj 305 161 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+-262130 -1 5600 1;
+#X obj 14 246 *~ 0;
+#X obj 132 245 *~ 0;
+#X obj 105 152 dsp;
+#X obj 278 202 tgl 20 0 empty empty DSP 0 -10 1 10 -262144 -3137 -3137
+0 1;
+#X obj 200 318 s \$0.left.volume;
+#X obj 320 319 s \$0.right.volume;
+#X obj 32 197 r \$0.left.volume;
+#X obj 142 198 r \$0.right.volume;
+#X obj 74 290 dac~;
+#X connect 1 0 8 0;
+#X connect 2 0 1 0;
+#X connect 4 0 9 0;
+#X connect 4 0 10 0;
+#X connect 8 0 0 0;
+#X connect 9 0 13 0;
+#X connect 10 0 14 0;
+#X connect 11 0 17 0;
+#X connect 12 0 18 0;
+#X connect 13 0 21 0;
+#X connect 14 0 21 1;
+#X connect 16 0 15 0;
+#X connect 19 0 13 1;
+#X connect 20 0 14 1;
+#X coords 0 -1 1 1 76 140 2 250 155;
